@@ -110,7 +110,7 @@ Step 10: SSH into VM2 from VM1 via PowerShell. Type "SSH" into WireShark's filte
 <img width="896" alt="image" src="https://user-images.githubusercontent.com/122701786/213091500-81a2e254-527b-42e1-88ad-94dd8544e1fe.png">
 
 Step 11: Back in Wireshark, filter for DHCP traffic only. Observe the DHCP traffic appearing in Wireshark.
-14. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig/renew). Observe the DHCP traffic appearing in Wireshark.
+From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig/renew). Observe the DHCP traffic appearing in Wireshark.
 
 
 <p>
