@@ -19,18 +19,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Windows 10 (21H2)
 - Ubuntu Server 20.04
 
-<h2>Installation Steps</h2>
-
-- Step 1: Create a Resource Group
-- Step 2: Create Virtual Machines
-- Step 3: Remote Desktop into VMs
-- Step 4: Install & Run WireShark
-- Step 5: Test Connectivity Between VMs
-- Step 6: Alter Network Security Group Settings
-- Step 7: SSH into VM
-- Step 8: Observe DHCP Traffic
-
-<h2>Actions and Observations</h2>
+<h2>Action Steps and Observations</h2>
 
 <p>
 <img width="590" alt="image" src="https://user-images.githubusercontent.com/122701786/213075915-97868c0b-35f4-446f-9d50-c6cacb9e0b16.png">
@@ -51,7 +40,7 @@ Step 1: Create a resource group
 <img width="673" alt="image" src="https://user-images.githubusercontent.com/122701786/213079045-2d72982a-8bcc-4a08-b479-2064f089abf5.png">
 </p>
 <p>
-4. Observe the network you created within Network Watcher
+Step 3: Observe the network you created within Network Watcher
 </p>
 <br />
 
@@ -59,7 +48,7 @@ Step 1: Create a resource group
 <img width="332" alt="image" src="https://user-images.githubusercontent.com/122701786/213079148-1140a236-56d7-4b4a-b5fb-1242105837df.png">
 </p>
 <p>
-5. Use Remote Desktop to connect to your Windows 10 Virtual Machine
+Step 4: Remote Desktop into VMs
 
 </p>
 <br />
@@ -68,7 +57,7 @@ Step 1: Create a resource group
 <img width="395" alt="image" src="https://user-images.githubusercontent.com/122701786/213079950-b37cd669-4463-4da7-b82e-c2707ee57e83.png">
 </p>
 <p>
-6.Within your Windows 10 Virtual Machine, Install Wireshark
+Step 5: Install & Run WireShark
 
 </p>
 <br />
@@ -77,7 +66,7 @@ Step 1: Create a resource group
 <img width="709" alt="image" src="https://user-images.githubusercontent.com/122701786/213082109-8c9ce448-2111-47ab-8f5e-21e5e7716387.png">
 </p>
 
-7. Open Wireshark and filter for ICMP traffic only
+Step 6: Open Wireshark and filter for ICMP traffic only
 </p>
 <br />
 
@@ -85,7 +74,7 @@ Step 1: Create a resource group
 <img width="737" alt="image" src="https://user-images.githubusercontent.com/122701786/213083862-ea1a8828-7ef3-4fc8-9721-fdb32bb8360f.png">
 </p>
 <p>
-8. Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM. Observe your ping requests and replies within Wireshark.
+Step 7: Test Connectivity Between VMs. Observe your ping requests and replies within Wireshark.
   
   </p>
 <br />
@@ -94,7 +83,7 @@ Step 1: Create a resource group
 <img width="742" alt="image" src="https://user-images.githubusercontent.com/122701786/213084429-1b6be90f-442b-4f6f-ad84-5049c14eb849.png">
 </p>
 
-9. From The Windows 10 VM, open command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark.
+Step 8: From The Windows 10 VM, open command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark.
 
 </p>
 <br />
@@ -105,7 +94,7 @@ Step 1: Create a resource group
 <img width="394" alt="image" src="https://user-images.githubusercontent.com/122701786/213087142-7f2fc34a-e230-40b3-9d7f-dbee08674ef6.png">
 <img width="343" alt="image" src="https://user-images.githubusercontent.com/122701786/213086410-68e7adab-2be7-4cc6-a808-d216ac4d398e.png">
 
-10.Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM. Try disabling incomming ICMP traffic from the Network Security Group your Ubutu uses.Then, try enabling the traffic oncemore.
+Step 9: Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM. Try disabling incomming ICMP traffic from the Network Security Group your Ubutu uses.Then, try enabling the traffic oncemore.
 
 
 <p>
@@ -114,13 +103,13 @@ Step 1: Create a resource group
 <img width="893" alt="image" src="https://user-images.githubusercontent.com/122701786/213090316-833a9fda-d020-4bb8-aef9-f0d2eef6a69f.png">
 <p>
   
-Step 6: SSH into VM2 from VM1 via PowerShell. Type "SSH" into WireShark's filter bar (reference step 3) --> Go to "PowerShell" again, type "ssh labuser@(VM1 private IP address)" into the cmd line *view screenshot above for help --> Type "yes" to connection prompt --> enter password on next cmd line (password will not show but enter it anyway and press enter key, it will register) --> You have now successfully remotely logged into VM2's command-line Interface (CLI). It should now read "labuser@VM2:". You can type a linux cmd such as: "id" to see the new network traffic between the VMs since linking via SSH. When finished exploring, type "exit" into cmd line on PowerShell to end the connection. 
+Step 10: SSH into VM2 from VM1 via PowerShell. Type "SSH" into WireShark's filter bar (reference step 3) --> Go to "PowerShell" again, type "ssh labuser@(VM1 private IP address)" into the cmd line *view screenshot above for help --> Type "yes" to connection prompt --> enter password on next cmd line (password will not show but enter it anyway and press enter key, it will register) --> You have now successfully remotely logged into VM2's command-line Interface (CLI). It should now read "labuser@VM2:". You can type a linux cmd such as: "id" to see the new network traffic between the VMs since linking via SSH. When finished exploring, type "exit" into cmd line on PowerShell to end the connection. 
 </p>
 <br />
 
 <img width="896" alt="image" src="https://user-images.githubusercontent.com/122701786/213091500-81a2e254-527b-42e1-88ad-94dd8544e1fe.png">
 
-13. Back in Wireshark, filter for DHCP traffic only. Observe the DHCP traffic appearing in Wireshark.
+Step 11: Back in Wireshark, filter for DHCP traffic only. Observe the DHCP traffic appearing in Wireshark.
 14. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig/renew). Observe the DHCP traffic appearing in Wireshark.
 
 
@@ -129,10 +118,10 @@ Step 6: SSH into VM2 from VM1 via PowerShell. Type "SSH" into WireShark's filter
 </p>
 
 
-15. Back in Wireshark, filter for DNS traffic only
+Step 12: Back in Wireshark, filter for DNS traffic only
 
 
-16. From your Windows 10 VM within a command line, use nslookup to see the IP address for google.com
+Step 13: From your Windows 10 VM within a command line, use nslookup to see the IP address for google.com
 
 
 
@@ -140,7 +129,7 @@ Step 6: SSH into VM2 from VM1 via PowerShell. Type "SSH" into WireShark's filter
 <img width="614" alt="image" src="https://user-images.githubusercontent.com/122701786/213092040-986fec4a-43d4-4ed7-9729-d9eefe8bfdd6.png">
 </p>
 
-17.Back in Wireshark, filter for RDP traffic only (tcp.port == 3389)
+Step 14: Back in Wireshark, filter for RDP traffic only (tcp.port == 3389)
 
 
-18.Observe the immediate non-stop spam of traffic. This traffic seems to be nonstop because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted.
+Observe the immediate non-stop spam of traffic. This traffic seems to be nonstop because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted.
