@@ -127,4 +127,4 @@ Step 12: Back in Wireshark, filter for DNS traffic only. From your Windows 10 VM
 Step 13: Back in Wireshark, filter for RDP traffic only (tcp.port == 3389)
 
 
-Observe the immediate non-stop spam of traffic. This traffic seems to be nonstop because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted.
+Step 14: Observe the immediate non-stop spam of traffic. This traffic seems to be nonstop because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted.
