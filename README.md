@@ -94,7 +94,7 @@ Step 8: From The Windows 10 VM, open command line or PowerShell and attempt to p
 <img width="394" alt="image" src="https://user-images.githubusercontent.com/122701786/213087142-7f2fc34a-e230-40b3-9d7f-dbee08674ef6.png">
 <img width="343" alt="image" src="https://user-images.githubusercontent.com/122701786/213086410-68e7adab-2be7-4cc6-a808-d216ac4d398e.png">
 
-Step 9: Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM. Try disabling incoming ICMP traffic from the Network Security Group your Ubutu uses. Then, try enabling the traffic once more.
+Step 9: Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM. Try disabling incoming ICMP traffic from the Network Security Group your Ubuntu uses. Then, try enabling the traffic once more.
 
 
 <p>
